@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>StockX Scraper</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    .topnav{
+        overflow: hidden;
+        background-color:#660708;
+        padding-top: -8px;
+        margin-top: -8px;
+        margin-right: -8px;
+        margin-left: -8px;
+    }
+    .topnav input[type=text] {
+  float: right;
+  padding: 15px;
+  margin-top: -4px;
+  margin-right: 50px;
+  margin-bottom: 4px;
+  border: none;
+  font-size: 17px;
+ }  
+
+ h1{
+     font-family: 'Roboto Slab',serif;
+     margin-top: 10px;
+     margin-bottom: -40px;
+     padding-top: 10px;
+     padding-left: 10px;
+     color: white;
+ }
+
+ table{
+     margin:auto;
+     width: 50%;
+     border: 3px solid black;
+     padding: 15px;
+     font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+ }
+
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>
+<body style ="background-color: #495867;">
+    <div class="topnav">
+        <h1 style = color:white;>StockX Scraper</h1>
+        <form name="passdata" action="." method="post">
+            <input type='text' name="data_bridge">
+        </form>
+        
+    </div>
+
+    <div class="table">
+        <div>
+            <table class="center">
+                <tr>
+                    {% for header in table_headings %}
+                    <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+                <tr>
+                {% for row in data %}
+
+                    {% for cell in row%}
+                    <td>{{ cell }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                   
+            </table>
+        </div>
+    </div>
+</body>
+</html>
