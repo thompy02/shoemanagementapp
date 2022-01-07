@@ -1,12 +1,15 @@
 from selenium import webdriver
-PATH = "C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome(PATH)
+from webdriver_manager.chrome import ChromeDriverManager
+from flask_sqlalchemy import SQLAlchemy
+from app import getvalue
+#PATH = "C:\Users\trace thompson\Downloads\chromedriver_win32 (2)"
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 ##"https://stockx.com/air-jordan-5-retro-moonlight-2021"
 
 
 
-ShoeLink = input("paste your shoe link here")
+ShoeLink = input("paste shoe link here") #getvalue
 
 driver.get(ShoeLink)
 
@@ -18,7 +21,6 @@ BuyPrice = driver.find_element_by_xpath('//*[@id="main-content"]/div/section[1]/
 
 print(BuyPrice.text + " Is the current Price to buy")
 
-##ShoeSku = 
 
 ##this just removes the dollar sign from the scraped price allowing you to convert to a float
 SalePrice1 = LastSale.text.translate({ord("$"):None})
@@ -32,7 +34,10 @@ PriceAdjustment = (float(SalePrice2) * float(PriceFormula))
 print("$" + str(PriceAdjustment) + " This is what you should sell this for.")
 
 
-## code to allow for this python script to interact with the SQL database 
+
+
+
+
 
 
 
