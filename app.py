@@ -1,4 +1,4 @@
-from enum import unique
+
 from flask import Flask, render_template,request
 from forms import RegistrationForm, LoginForm
 from flask_sqlalchemy import SQLAlchemy
@@ -21,6 +21,7 @@ def hello_world(name=None):
 @app.route("/", methods=['POST'])
 def getvalue():
     HTML_Info = request.form['data_bridge']
+    return HTML_Info
     
 
 #@app.route("/register", methods=['GET','POST'])

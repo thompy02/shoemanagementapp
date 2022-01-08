@@ -9,11 +9,11 @@ driver = webdriver.Chrome(ChromeDriverManager().install())
 
 
 
-ShoeLink = input("paste shoe link here") #getvalue
+ShoeLink = getvalue()
 
 driver.get(ShoeLink)
 
-LastSale = driver.find_element_by_xpath('//*[@id="main-content"]/div/section[1]/div[3]/div[2]/div[2]/div[1]/p[2]')
+LastSale = driver.find_element_by_xpath('//*[@id="main-content"]/div/section[1]/div[3]/div[2]/div[3]/div[1]/p[2]')
 
 print(LastSale.text + " Is the Price of the last shoe sold")
 

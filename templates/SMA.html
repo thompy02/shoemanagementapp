@@ -62,8 +62,9 @@ tr:nth-child(even) {
 <body style ="background-color: #495867;">
     <div class="topnav">
         <h1 style = color:white;>StockX Scraper</h1>
-        <form name="passdata" action="." method="POST">
+        <form name="passdata" action="{{ url_for('getvalue') }}" method="POST">
             <input type='text' name="data_bridge" placeholder="paste shoe link here">
+            <input type="submit">
         </form>
         
     </div>
