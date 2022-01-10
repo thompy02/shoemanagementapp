@@ -8,3 +8,5 @@ with engine.connect as conn:
         Text("INSERT INTO Shoe_Data_Table (Row_Id, Last_Sale_Value, Buy_Price_Value, Price_Recc_Value) VALUES (LastSale, BuyPrice, PriceAdjustment)")
     )
     conn.commit()
+
+
