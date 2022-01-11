@@ -1,7 +1,7 @@
 
 from typing import Text
 from flask import Flask, render_template,request
-from forms import RegistrationForm, LoginForm
+#from forms import RegistrationForm, LoginForm
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
