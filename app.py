@@ -2,11 +2,11 @@
 from typing import Text
 from flask import Flask, render_template,request
 #from forms import RegistrationForm, LoginForm
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
 
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
 def get_value_related_info(value):
     return f"you have entered {value}"
@@ -28,12 +28,15 @@ def getvalue():
     return render_template('SMA.html', text="")
     
 
+if __name__ == "__main__":
+    app.run(debug=True)
+
 #@app.route("/register", methods=['GET','POST'])
 #def register():
-    form = RegistrationForm()
-    return render_template('register.html', title='register', form=form)
+   # form = RegistrationForm()
+   # return render_template('register.html', title='register', form=form)
 
 #@app.route("/login")
 #def login():
-    form = LoginForm()
-    return render_template('login.html', title='login', form=form)
+    #form = LoginForm()
+    #return render_template('login.html', title='login', form=form)

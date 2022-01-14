@@ -1,6 +1,6 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 from app import getvalue
 #PATH = "C:\Users\trace thompson\Downloads\chromedriver_win32 (2)"
 driver = webdriver.Chrome(ChromeDriverManager().install())
